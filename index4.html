@@ -2,6 +2,24 @@
 <html>
   <head>
     <title>Dynamic Consultants_Inquiry</title>
+    <SCRIPT language=JavaScript>
+    function check()
+    {
+      if (document.form.Phone.value=="")
+      {
+        alert("Enter Your Phone No.");
+        document.form.Phone.focus();
+        return false;
+      }
+      if ((document.form.E-mail.value=="")||(document.form.E-mail.value.indexOf('@',0)==-1)||(document.form.E-mail.value.indexOf('.',0)==-1))
+      {
+        alert("Enter Valid E-mail address");
+        document.form.E-mail.focus();
+        return false;
+      }
+      else return true;
+    }
+    </SCRIPT>
     <style>
     body {margin-left: 350px; margin-right: 350px;}
     p {color: black;}
@@ -684,27 +702,27 @@
           <img src="C:\Users\BHARAT PATEL\Documents\GitHub\shubhambharatbhai.github.io\shubhambharatbhai.github.io\image_03" alt="Image 3">
           <h3 style="color:red;">Online Inquiry</h3>
           <p style="color:orange;"> Fields marked with (*) are compulsory. This information is must for proper inquiry.</p>
-          <form action="C:\Users\BHARAT PATEL\Documents\GitHub\shubhambharatbhai.github.io\shubhambharatbhai.github.io\index5.html">
+          <form onSubmit="return check()" action=mail.php method=post>
             <table cellpadding="0" border="0" cellspacing="0" width="100%">
               <tr>
                 <td width="30%">Your name</td>
                 <td width="5%">:</td>
-                <td width="140%"><input type="text" name="Name" size="26"></td>
+                <td width="100%"><input type="text" name="Name" size="26"></td>
               </tr>
               <tr>
                 <td width="30%">Designation</td>
                 <td width="5%">:</td>
-                <td width="140%"><input type="text" name="Designation" size="26"></td>
+                <td width="100%"><input type="text" name="Designation" size="26"></td>
               </tr>
               <tr>
                 <td width="30%">Company Name</td>
                 <td width="5%">:</td>
-                <td width="140%"><input type="text" name="Company" size="26"></td>
+                <td width="100%"><input type="text" name="Company" size="26"></td>
               </tr>
               <tr>
                 <td width="30%">Type of industry</td>
                 <td width="5%">:</td>
-                <td width="140%">
+                <td width="100%">
                   <select size="1" name="D1">
                     <option>[ Select One ]</option>
                     <option>Aluminium</option>
@@ -734,32 +752,32 @@
               <tr>
                 <td width="30%">Address</td>
                 <td width="5%">:</td>
-                <td width="140%"><input type="text" name="Address" size="26"></td>
+                <td width="100%"><input type="text" name="Address" size="26"></td>
               </tr>
               <tr>
                 <td width="30%">Phone number (*)</td>
                 <td width="5%">:</td>
-                <td width="140%"><input type="text" name="Phone" size="26"></td>
+                <td width="100%"><input type="text" name="Phone" size="26"></td>
               </tr>
               <tr>
                 <td width="30%">Telephone number</td>
                 <td width="5%">:</td>
-                <td width="140%"><input type="text" name="Telephone" size="26"></td>
+                <td width="100%"><input type="text" name="Telephone" size="26"></td>
               </tr>
               <tr>
                 <td width="30%">Fax number</td>
                 <td width="5%">:</td>
-                <td width="140%"><input type="text" name="Fax" size="26"></td>
+                <td width="100%"><input type="text" name="Fax" size="26"></td>
               </tr>
               <tr>
                 <td width="30%">E-mail address (*)</td>
                 <td width="5%">:</td>
-                <td width="140%"><input type="text" name="E-mail" size="26"></td>
+                <td width="100%"><input type="text" name="E-mail" size="26"></td>
               </tr>
               <tr>
                 <td width="30%">Reference</td>
                 <td width="5%">:</td>
-                <td width="140%">
+                <td width="100%">
                   <select size="1" name="D2">
                     <option>Advertisment</option>
                     <option>E-mail Marketing</option>
@@ -771,7 +789,7 @@
               <tr>
                 <td width="30%">Your Requirements</td>
                 <td width="5%">:</td>
-                <td width="140%"><textarea rows="9" name="Requirements"></textarea></td>
+                <td width="100%"><textarea rows="9" name="Requirements"></textarea></td>
               </tr>
               <tr>
                 <td width="40%" align="center"><input type="submit" name="D3" value="Submit"></td>
