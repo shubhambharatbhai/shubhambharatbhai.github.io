@@ -687,8 +687,8 @@
           <form action=index5.html method=post>
             <table cellpadding="0" border="0" cellspacing="0" width="100%">
               <tr>
-                <td width="30%">Your name</td>
-                <td width="100%"> : <input type="text" name="Name" size="26"></td>
+                <td width="30%">Your name *</td>
+                <td width="100%"> : <input type="text" name="Name" size="26" required></td>
               </tr>
               <tr>
                 <td width="30%">Designation</td>
@@ -732,8 +732,8 @@
                 <td width="100%"> : <input type="text" name="Address" size="26"></td>
               </tr>
               <tr>
-                <td width="30%">Phone number (*)</td>
-                <td width="100%"> : <input type="Phone" pattern=[0-9]{10} placeholder="1234567890" name="Phone" size="26" required></td>
+                <td width="30%">Phone number</td>
+                <td width="100%"> : <input type="Phone" pattern=[0-9]{10} placeholder="1234567890" name="Phone" size="26"></td>
               </tr>
               <tr>
                 <td width="30%">Telephone number</td>
@@ -763,9 +763,10 @@
                 <td width="100%"> : <textarea rows="9" name="Requirements"></textarea></td>
               </tr>
               <br>
+              <br>
               <tr>
-                <td width="40%" align="right"><button name="D3">Submit</td>
-                <td width="40%" align="left"><button name="D4">Reset</td>
+                <td width="40%" align="right"><button type="submit" value="Submit"></td>
+                <td width="40%" align="left"><input type="reset" value="Reset"></td>
               </tr>
             </table>
           </form>
