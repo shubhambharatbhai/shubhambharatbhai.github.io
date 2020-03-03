@@ -2,24 +2,6 @@
 <html>
   <head>
     <title>Dynamic Consultants_Inquiry</title>
-    <SCRIPT language=JavaScript>
-    function check()
-    {
-      if (document.form.Phone.value=="")
-      {
-        alert("Enter Your Phone No.");
-        document.form.Phone.focus();
-        return false;
-      }
-      if ((document.form.E-mail.value=="")||(document.form.E-mail.value.indexOf('@',0)==-1)||(document.form.E-mail.value.indexOf('.',0)==-1))
-      {
-        alert("Enter Valid E-mail address");
-        document.form.E-mail.focus();
-        return false;
-      }
-      else return true;
-    }
-    </SCRIPT>
     <style>
     body {margin-left: 350px; margin-right: 350px;}
     p {color: black;}
@@ -780,9 +762,10 @@
                 <td width="30%">Your Requirements</td>
                 <td width="100%"> : <textarea rows="9" name="Requirements"></textarea></td>
               </tr>
+              <br>
               <tr>
                 <td width="40%" align="right"><button name="D3">Submit</td>
-                <td width="40%" align="left"><button name="D4" value="Reset"></td>
+                <td width="40%" align="left"><button name="D4">Reset</td>
               </tr>
             </table>
           </form>
